@@ -17,7 +17,6 @@ export class MainMenu extends ParallaxScene {
      super.preload();
 
      this.load.image('logo', 'assets/Logo.png');
-     this.load.audio('bg-music', 'assets/industrial-trap.mp3');
    }
 
   /**
@@ -57,12 +56,8 @@ export class MainMenu extends ParallaxScene {
     );
 
     PushableText.apply(this.creditsText, () => {
-      this.sound.stopAll();
       this.scene.start('credits');
     });
-
-    this.sound.play('bg-music', { loop: true, volume: .05 });
-
   }
 
   /**
